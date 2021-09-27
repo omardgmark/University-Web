@@ -6,7 +6,7 @@
 .top{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.8)),url(images/banner.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -24,6 +24,7 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    font-family: 'Rubik', sans-serif;
 }
 .nav-links ul li{
     list-style: none;
@@ -35,4 +36,70 @@ nav img{
 .nav-links ul li a{
     color: aquamarine;
     text-decoration: none;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+}
+.btn1{
+    display: inline-block;
+    text-decoration: none;
+    color: cyan;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.btn1:hover{
+    border: 1px solid #f31506;
+    background: #f31506;
+    transition: 0.5s;
+    color: #fff;
+    box-shadow: 8px 8px 70px #fff;
+
+}
+/* Below part is for mobile responsive menu, visible only in mobile */
+nav .fa{
+    display: none;
+
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f31506;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
 }
